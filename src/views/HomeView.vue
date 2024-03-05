@@ -19,25 +19,28 @@
     <div class="Talk-Container">
       <div class="Talk">
 
-        <div class="Talk-Student">
-          <div class="Talk-Left">
-            <div class="Avatar">
-              <img :src="studentList[nowStudent.id]['avatar'][nowStudent.avatar]" draggable="false" />
+        <template v-for="(data, index) in dataList" :key="index">
+          <div class="Talk-Student" v-if="data.studentId !== 0">
+            <div class="Talk-Left">
+              <div class="Avatar" v-if="data.avatarState !== 'Hide'">
+                <img :src="studentList[data.studentId]['avatar'][data.avatarId]" draggable="false" />
+              </div>
+            </div>
+            <div class="Talk-Right">
+              <div class="Talk-Name" v-show="data.avatarState !== 'Hide'"><strong>{{ studentList[data.studentId].name
+                  }}</strong></div>
+              <div class="Talk-Message" :class="{ 'no-before': data.avatarState === 'Hide' }">
+                {{ data.content }}
+              </div>
             </div>
           </div>
-          <div class="Talk-Right">
-            <div class="Talk-Name"><strong>{{ studentList[nowStudent.id].name }}</strong></div>
-            <div class="Talk-Message">
-              {{ message }}
-            </div>
-          </div>
-        </div>
 
-        <div class="Talk-Sensei">
-          <div class="Talk-Message">
-            {{ message }}
+          <div class="Talk-Sensei" v-else>
+            <div class="Talk-Message">
+              {{ data.content }}
+            </div>
           </div>
-        </div>
+        </template>
 
       </div>
       <div class="Edit">
@@ -49,11 +52,12 @@
           </button>
 
           <div class="Input-Text">
-            <v-textarea class="input" label="聊天内容" v-model="message" name="input" rows="2" variant="underlined"
+            <v-textarea class="input" label="聊天内容" v-model="message" name="input" rows="1" variant="underlined"
               auto-grow />
           </div>
 
-          <button class="Input-Send" @click="sendMessage">
+          <button class="Input-Send" @click="sendMessage(), saveToLocalStorage()"
+            :style="{ cursor: (this.message.trim() === '') ? 'not-allowed' : 'pointer' }">
             <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="SendIcon" fill="#757575">
               <path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"></path>
             </svg>
@@ -61,13 +65,13 @@
         </div>
 
         <div class="Edit-Item-Box">
-          <div class="Edit-Item">
+          <div class="Edit-Item" @click="change('Sensei')">
             <div class="Avatar">
               <img :src="'/HeadIcon/student/sensei.webp'" draggable="false" />
             </div>
           </div>
 
-          <div class="Edit-Item" :id="index" v-for="(student, index) in talkedStudentList" :key="index"
+          <div class="Edit-Item" :id="index" v-for="( student, index ) in  talkedStudentList" :key="index"
             :style="{ width: '100px', 'justify-content': 'space-around' }"
             @click="changeStudent(student.id, student.avatar)">
             <div class="Avatar">
@@ -75,7 +79,7 @@
             </div>
 
             <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CancelIcon"
-              @click="deleteItem(index)">
+              @click="deleteItem(index); $event.stopPropagation()">
               <path
                 d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z">
               </path>
@@ -93,15 +97,18 @@ import studentData from '@/assets/student.json';
 export default {
   data() {
     return {
-      message: 'asdasdasdasd',
+      message: '',
       preStudent: {
+        id: 0,
+        avatar: 0
       },
       nowStudent: {
         id: 0,
         avatar: 0
       },
       studentList: [],
-      talkedStudentList: [],
+      talkedStudentList: [
+      ],
       dataItem: {
         is_breaking: false,
         studentId: 0,
@@ -116,15 +123,26 @@ export default {
   },
   methods: {
     sendMessage() {
-    },
-    changeStudent(id, index) {
-      if (!this.preStudent.id) {
-        this.preStudent.id = this.nowStudent.id;
-        this.preStudent.avatar = this.nowStudent.avatar;
-      };
+      if (this.message.trim() === '') {
+        return;
+      }
+      this.dataItem = {
+        is_breaking: false,
+        studentId: this.nowStudent.id,
+        name: this.studentList[this.nowStudent.id].name,
+        avatarId: this.nowStudent.avatar,
+        avatarState: (this.preStudent.id == this.nowStudent.id && this.preStudent.avatar == this.nowStudent.avatar) ? 'Hide' : 'Show',
+        type: 'TEXT',
+        content: this.message,
+      }
 
       this.preStudent.id = this.nowStudent.id;
       this.preStudent.avatar = this.nowStudent.avatar;
+
+      this.dataList.push(this.dataItem);
+      this.message = '';
+    },
+    changeStudent(id, index) {
       this.nowStudent.id = id;
       this.nowStudent.avatar = index;
       this.message = '';
@@ -139,14 +157,38 @@ export default {
       });
 
       if (!hasDuplicate) {
-        this.talkedStudentList.push(adder);
+        this.talkedStudentList.unshift(adder);
+      }
+    },
+    change(event) {
+      switch (event) {
+        case 'Sensei':
+          this.nowStudent.id = 0;
+          this.nowStudent.avatar = 0;
+          break;
       }
     },
     deleteItem(index) {
-      this.nowStudent.id = this.preStudent.id;
-      this.nowStudent.avatar = this.preStudent.avatar;
       this.talkedStudentList.splice(index, 1);
-    }
+    },
+    loadFromLocalStorage() {
+      const dataList = localStorage.getItem('dataList');
+      if (dataList) {
+        this.dataList = JSON.parse(dataList);
+      }
+
+      const talkedStudentList = localStorage.getItem('talkedStudentList');
+      if (talkedStudentList) {
+        this.talkedStudentList = JSON.parse(talkedStudentList);
+      }
+    },
+    saveToLocalStorage() {
+      localStorage.setItem('talkedStudentList', JSON.stringify(this.talkedStudentList));
+      localStorage.setItem('dataList', JSON.stringify(this.dataList));
+    },
+  },
+  mounted() {
+    this.loadFromLocalStorage();
   },
   beforeMount() {
     this.studentList = studentData;
@@ -212,12 +254,15 @@ export default {
 .Talk-Container {
   width: 30%;
   height: 100vh;
+  overflow: hidden;
   box-shadow: 3px 0 15px 5px rgba(0, 0, 0, 0.2);
 
   .Talk {
     width: 100%;
     height: 75%;
-    z-index: 1;
+    padding-top: 8px;
+    padding-bottom: 16px;
+    overflow: auto;
     background-color: #fff7e1;
 
     .Talk-Student {
@@ -231,7 +276,7 @@ export default {
         align-items: center;
         margin-right: 16px;
         width: 70px;
-        height: 70px;
+        max-height: 70px;
       }
 
       .Talk-Right {
@@ -305,6 +350,24 @@ export default {
         }
       }
     }
+
+    .Talk::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .Talk::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .Talk::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 6px;
+      border: 3px solid transparent;
+    }
+
+    .Talk::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
   }
 
   .Edit {
@@ -361,7 +424,7 @@ export default {
       flex-direction: row;
       flex-wrap: wrap;
       width: calc(100% - 5px);
-      height: 50%;
+      height: 64%;
       padding: 10px;
       overflow: auto;
 
