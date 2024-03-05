@@ -2,16 +2,17 @@
   <div class="Main-container">
     <div class="Data-Container">
       <div class="Student-List">
-        <div class="Student-Item" v-for="student in studentList" :key="student.id">
+        <div class="Student-Item" v-for="student in studentList.slice(1)" :key="student.id">
           <div class="Avatar-Box">
-            <template v-for="(avatar, index) in student.avatar">
-              <div class="Avatar" :id="index" @click="changeStudent(student.id, index)">
-                <img :key="index" :src="avatar" draggable="false" />
+            <template v-for="(avatar, avatarIndex) in student.avatar">
+              <div class="Avatar" :id="avatarIndex" @click="changeStudent(student.id, avatarIndex)">
+                <img :key="avatarIndex" :src="avatar" draggable="false" />
               </div>
             </template>
           </div>
           <div class="Name">{{ student.name }}</div>
         </div>
+
       </div>
     </div>
 
@@ -21,7 +22,7 @@
         <div class="Input-Box">
           <button class="Input-Avatar">
             <div class="Avatar">
-              <img :src="'/HeadIcon/student/sensei.webp'" />
+              <img :src="studentList[nowStudent.id]['avatar'][nowStudent.avatar]" draggable="false" />
             </div>
           </button>
 
@@ -50,7 +51,8 @@
               <img :src="studentList[student.id]['avatar'][student.avatar]" draggable="false" />
             </div>
 
-            <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CancelIcon">
+            <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CancelIcon"
+              @click="deleteItem(index)">
               <path
                 d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z">
               </path>
@@ -69,13 +71,14 @@ export default {
   data() {
     return {
       message: '',
-      newStudent: '',
+      preStudent: {
+      },
+      nowStudent: {
+        id: 0,
+        avatar: 0
+      },
       studentList: [],
       talkList: [
-        {
-          id: 0,
-          avatar: 0,
-        }
       ],
     }
   },
@@ -84,9 +87,13 @@ export default {
       console.log(this.message);
     },
     changeStudent(id, index) {
-      const newSrc = this.studentList[id]["avatar"][index];
-      const avatarImg = document.querySelector('.Input-Avatar .Avatar img');
-      avatarImg.src = newSrc;
+      if (!this.preStudent.id) {
+        this.preStudent.id = this.nowStudent.id;
+        this.preStudent.avatar = this.nowStudent.avatar;
+      };
+
+      this.nowStudent.id = id;
+      this.nowStudent.avatar = index;
       this.message = '';
 
       var adder = {
@@ -101,6 +108,11 @@ export default {
       if (!hasDuplicate) {
         this.talkList.push(adder);
       }
+    },
+    deleteItem(index) {
+      this.nowStudent.id = this.preStudent.id;
+      this.nowStudent.avatar = this.preStudent.avatar;
+      this.talkList.splice(index, 1);
     }
   },
   beforeMount() {
@@ -176,8 +188,9 @@ export default {
   }
 
   .Edit {
-    width: 100%;
+    width: calc(100% - 5px);
     height: 25%;
+    overflow: auto;
     background-color: white;
 
     .Input-Box {
@@ -227,9 +240,10 @@ export default {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      width: 100%;
-      height: auto;
+      width: calc(100% - 5px);
+      height: 50%;
       padding: 10px;
+      overflow: auto;
 
       .Edit-Item {
         display: flex;
@@ -238,6 +252,7 @@ export default {
         width: 60px;
         height: 60px;
         margin-right: 10px;
+        margin-bottom: 10px;
         border-radius: 10px;
         border: 1px solid #bdbdbd;
 
@@ -265,6 +280,46 @@ export default {
         background-color: #f5f5f5;
       }
     }
+
+    .Edit-Item-Box::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .Edit-Item-Box::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .Edit-Item-Box::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 6px;
+      border: 3px solid transparent;
+    }
+
+    .Edit-Item-Box::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+  }
+
+  .Edit::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .Edit::-webkit-scrollbar-track {
+    background: transparent;
+    /* 设置滚动条轨道背景为透明 */
+  }
+
+  .Edit::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    /* 设置滚动条 thumb 的背景颜色为半透明黑色 */
+    border-radius: 6px;
+    border: 3px solid transparent;
+  }
+
+  .Edit::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 设置滚动条 thumb 悬停时的背景颜色为更加透明的黑色 */
   }
 }
 </style>
