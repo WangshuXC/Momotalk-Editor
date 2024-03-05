@@ -1,0 +1,51 @@
+[
+    {
+        "id": 0,
+        "name": "天童 爱丽丝",
+        "school": "千年科学学园",
+        "club": "游戏开发部",
+        "avatar": [
+            "/HeadIcon/student/aris.webp",
+            "/HeadIcon/student/aris_(maid).webp"
+        ]
+    },
+    {
+        "id": 1,
+        "name": "陆八魔 阿露",
+        "school": "格赫娜学园",
+        "club": "便利屋68",
+        "avatar": [
+            "/HeadIcon/student/aru.webp",
+            "/HeadIcon/student/aru_(dress).webp"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "白洲 梓",
+        "school": "三一综合学园",
+        "club": "补习部",
+        "avatar": [
+            "/HeadIcon/student/azusa.webp",
+            "/HeadIcon/student/azusa_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "久田 泉奈",
+        "school": "百鬼夜行联合学园",
+        "club": "忍法研究部",
+        "avatar": [
+            "/HeadIcon/student/izuna.webp",
+            "/HeadIcon/student/izuna_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "大野 月咏",
+        "school": "百鬼夜行联合学园",
+        "club": "忍法研究部",
+        "avatar": [
+            "/HeadIcon/student/tsukuyo.webp"
+        ]
+    }
+]
