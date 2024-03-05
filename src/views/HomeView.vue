@@ -17,7 +17,29 @@
     </div>
 
     <div class="Talk-Container">
-      <div class="Talk"></div>
+      <div class="Talk">
+
+        <div class="Talk-Student">
+          <div class="Talk-Left">
+            <div class="Avatar">
+              <img :src="studentList[nowStudent.id]['avatar'][nowStudent.avatar]" draggable="false" />
+            </div>
+          </div>
+          <div class="Talk-Right">
+            <div class="Talk-Name"><strong>{{ studentList[nowStudent.id].name }}</strong></div>
+            <div class="Talk-Message">
+              {{ message }}
+            </div>
+          </div>
+        </div>
+
+        <div class="Talk-Sensei">
+          <div class="Talk-Message">
+            {{ message }}
+          </div>
+        </div>
+
+      </div>
       <div class="Edit">
         <div class="Input-Box">
           <button class="Input-Avatar">
@@ -45,8 +67,9 @@
             </div>
           </div>
 
-          <div class="Edit-Item" :id="index" v-for="(student, index) in talkList" :key="index"
-            :style="{ width: '100px', 'justify-content': 'space-around' }">
+          <div class="Edit-Item" :id="index" v-for="(student, index) in talkedStudentList" :key="index"
+            :style="{ width: '100px', 'justify-content': 'space-around' }"
+            @click="changeStudent(student.id, student.avatar)">
             <div class="Avatar">
               <img :src="studentList[student.id]['avatar'][student.avatar]" draggable="false" />
             </div>
@@ -70,7 +93,7 @@ import studentData from '@/assets/student.json';
 export default {
   data() {
     return {
-      message: '',
+      message: 'asdasdasdasd',
       preStudent: {
       },
       nowStudent: {
@@ -78,13 +101,21 @@ export default {
         avatar: 0
       },
       studentList: [],
-      talkList: [
-      ],
+      talkedStudentList: [],
+      dataItem: {
+        is_breaking: false,
+        studentId: 0,
+        name: '',
+        avatarId: 0,
+        avatarState: 'Show',
+        type: 'TEXT',
+        content: '',
+      },
+      dataList: []
     }
   },
   methods: {
     sendMessage() {
-      console.log(this.message);
     },
     changeStudent(id, index) {
       if (!this.preStudent.id) {
@@ -92,6 +123,8 @@ export default {
         this.preStudent.avatar = this.nowStudent.avatar;
       };
 
+      this.preStudent.id = this.nowStudent.id;
+      this.preStudent.avatar = this.nowStudent.avatar;
       this.nowStudent.id = id;
       this.nowStudent.avatar = index;
       this.message = '';
@@ -101,18 +134,18 @@ export default {
         avatar: index
       }
 
-      const hasDuplicate = this.talkList.some(item => {
+      const hasDuplicate = this.talkedStudentList.some(item => {
         return item.id === adder.id && item.avatar === adder.avatar;
       });
 
       if (!hasDuplicate) {
-        this.talkList.push(adder);
+        this.talkedStudentList.push(adder);
       }
     },
     deleteItem(index) {
       this.nowStudent.id = this.preStudent.id;
       this.nowStudent.avatar = this.preStudent.avatar;
-      this.talkList.splice(index, 1);
+      this.talkedStudentList.splice(index, 1);
     }
   },
   beforeMount() {
@@ -146,7 +179,7 @@ export default {
 }
 
 .Data-Container {
-  width: 69.5%;
+  width: 70%;
   height: 100vh;
   background-color: #dddddd;
 
@@ -184,7 +217,94 @@ export default {
   .Talk {
     width: 100%;
     height: 75%;
+    z-index: 1;
     background-color: #fff7e1;
+
+    .Talk-Student {
+      display: flex;
+      flex-direction: row;
+      padding: 8px 24px 0 16px;
+
+      .Talk-Left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 16px;
+        width: 70px;
+        height: 70px;
+      }
+
+      .Talk-Right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 75%;
+        height: 100%;
+
+        .Talk-Name {
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 4px;
+        }
+
+        .Talk-Message {
+          position: relative;
+          width: auto;
+          height: 100%;
+          padding: 8px;
+          font-size: 20px;
+          line-height: 24px;
+          color: white;
+          border-radius: 10px;
+          background-color: #4c5b70;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: -15px;
+            z-index: 2;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent #4c5b70 transparent transparent;
+          }
+        }
+
+        .no-before::before {
+          display: none;
+        }
+      }
+    }
+
+    .Talk-Sensei {
+      display: flex;
+      flex-direction: row-reverse;
+      padding: 8px 24px 0 16px;
+
+      .Talk-Message {
+        position: relative;
+        max-width: 83%;
+        height: 100%;
+        padding: 8px;
+        font-size: 20px;
+        line-height: 24px;
+        color: white;
+        border-radius: 10px;
+        background-color: #4a8aca;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 8px;
+          right: -15px;
+          z-index: 2;
+          border-width: 10px;
+          border-style: solid;
+          border-color: transparent transparent transparent #4a8aca;
+        }
+      }
+    }
   }
 
   .Edit {
