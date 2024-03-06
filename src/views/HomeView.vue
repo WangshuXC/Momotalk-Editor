@@ -52,8 +52,8 @@
           </button>
 
           <div class="Input-Text">
-            <v-textarea class="input" label="聊天内容" v-model="message" name="input" rows="1" variant="underlined"
-              auto-grow />
+            <v-textarea class="input" label="聊天内容" v-model="message" name="input" rows="2" max-rows="2"
+              variant="underlined" auto-grow />
           </div>
 
           <button class="Input-Send" @click="sendMessage(), saveToLocalStorage()"
@@ -64,16 +64,15 @@
           </button>
         </div>
 
-        <div class="Edit-Item-Box">
-          <div class="Edit-Item" @click="change('Sensei')">
+        <div ref="editItemBox" class="Edit-Item-Box" @wheel="handleHorizontalScroll">
+          <div class="Edit-Item-a" @click="change('Sensei')">
             <div class="Avatar">
               <img :src="'/HeadIcon/student/sensei.webp'" draggable="false" />
             </div>
           </div>
 
           <div class="Edit-Item" :id="index" v-for="( student, index ) in  talkedStudentList" :key="index"
-            :style="{ width: '100px', 'justify-content': 'space-around' }"
-            @click="changeStudent(student.id, student.avatar)">
+            :style="{ 'justify-content': 'space-around' }" @click="changeStudent(student.id, student.avatar)">
             <div class="Avatar">
               <img :src="studentList[student.id]['avatar'][student.avatar]" draggable="false" />
             </div>
@@ -141,6 +140,11 @@ export default {
 
       this.dataList.push(this.dataItem);
       this.message = '';
+    },
+    handleHorizontalScroll(event) {
+      event.preventDefault();
+      const container = this.$refs.editItemBox;
+      container.scrollLeft += event.deltaY;
     },
     changeStudent(id, index) {
       this.nowStudent.id = id;
@@ -252,6 +256,8 @@ export default {
 }
 
 .Talk-Container {
+  display: flex;
+  flex-direction: column;
   width: 30%;
   height: 100vh;
   overflow: hidden;
@@ -259,7 +265,8 @@ export default {
 
   .Talk {
     width: 100%;
-    height: 75%;
+    height: auto;
+    min-height: 80vh;
     padding-top: 8px;
     padding-bottom: 16px;
     overflow: auto;
@@ -372,8 +379,10 @@ export default {
 
   .Edit {
     width: calc(100% - 5px);
-    height: 25%;
-    overflow: auto;
+    padding-bottom: 20px;
+    /* height: auto; */
+    max-height: 20vh;
+    overflow: hidden;
     background-color: white;
 
     .Input-Box {
@@ -422,20 +431,19 @@ export default {
     .Edit-Item-Box {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
-      width: calc(100% - 5px);
-      height: 64%;
+      width: 100%;
       padding: 10px;
-      overflow: auto;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      white-space: nowrap;
 
       .Edit-Item {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 60px;
+        min-width: 120px;
         height: 60px;
         margin-right: 10px;
-        margin-bottom: 10px;
         border-radius: 10px;
         border: 1px solid #bdbdbd;
 
@@ -455,6 +463,31 @@ export default {
         }
       }
 
+      .Edit-Item-a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 60px;
+        height: 60px;
+        margin-right: 10px;
+        margin-left: 10px;
+        border-radius: 10px;
+        border: 1px solid #bdbdbd;
+
+        .Avatar {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      .Edit-Item-a:active {
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+      }
+
+      .Edit-Item-a:hover {
+        background-color: #f5f5f5;
+      }
+
       .Edit-Item:active {
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
       }
@@ -462,24 +495,6 @@ export default {
       .Edit-Item:hover {
         background-color: #f5f5f5;
       }
-    }
-
-    .Edit-Item-Box::-webkit-scrollbar {
-      width: 5px;
-    }
-
-    .Edit-Item-Box::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    .Edit-Item-Box::-webkit-scrollbar-thumb {
-      background-color: rgba(0, 0, 0, 0.3);
-      border-radius: 6px;
-      border: 3px solid transparent;
-    }
-
-    .Edit-Item-Box::-webkit-scrollbar-thumb:hover {
-      background-color: rgba(0, 0, 0, 0.5);
     }
 
   }

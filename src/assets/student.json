@@ -1,8 +1,8 @@
 [
     {
         "id": 0,
-        "name": "Sensei",
-        "school": "沙勒",
+        "name": "沙勒",
+        "school": "",
         "club": "",
         "avatar": [
             "/HeadIcon/student/sensei.webp"
@@ -10,6 +10,33 @@
     },
     {
         "id": 1,
+        "name": "旁白",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/NPC/narration.webp"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "回复",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/NPC/reply.webp"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "羁绊事件",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/NPC/sutori.webp"
+        ]
+    },
+    {
+        "id": 4,
         "name": "天童 爱丽丝",
         "school": "千年科学学园",
         "club": "游戏开发部",
@@ -19,7 +46,7 @@
         ]
     },
     {
-        "id": 2,
+        "id": 5,
         "name": "陆八魔 阿露",
         "school": "格赫娜学园",
         "club": "便利屋68",
@@ -29,7 +56,7 @@
         ]
     },
     {
-        "id": 3,
+        "id": 6,
         "name": "白洲 梓",
         "school": "三一综合学园",
         "club": "补习部",
@@ -39,7 +66,7 @@
         ]
     },
     {
-        "id": 4,
+        "id": 7,
         "name": "久田 泉奈",
         "school": "百鬼夜行联合学园",
         "club": "忍法研究部",
@@ -49,7 +76,7 @@
         ]
     },
     {
-        "id": 5,
+        "id": 8,
         "name": "大野 月咏",
         "school": "百鬼夜行联合学园",
         "club": "忍法研究部",
