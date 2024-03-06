@@ -422,6 +422,11 @@ export default {
           margin-right: 10px;
         }
       }
+
+      .Name {
+        font-size: 20px;
+        font-weight: 550;
+      }
     }
   }
 

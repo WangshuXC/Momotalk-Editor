@@ -2,86 +2,1804 @@
     {
         "id": 0,
         "name": "Sensei",
+        "name-en": "Sensei",
+        "name-jp": "先生",
         "school": "",
         "club": "",
         "avatar": [
-            "/HeadIcon/student/sensei.webp"
+            "/HeadIcon/sensei.webp"
         ]
     },
     {
         "id": 1,
         "name": "旁白",
+        "name-en": "narration",
+        "name-jp": "旁白",
         "school": "",
         "club": "",
         "avatar": [
-            "/HeadIcon/NPC/narration.webp"
+            "/HeadIcon/narration.webp"
         ]
     },
     {
         "id": 2,
         "name": "回复",
+        "name-en": "reply",
+        "name-jp": "",
         "school": "",
         "club": "",
         "avatar": [
-            "/HeadIcon/NPC/reply.webp"
+            "/HeadIcon/reply.webp"
         ]
     },
     {
         "id": 3,
         "name": "羁绊事件",
+        "name-en": "sutori",
+        "name-jp": "羁绊事件",
         "school": "",
         "club": "",
         "avatar": [
-            "/HeadIcon/NPC/sutori.webp"
+            "/HeadIcon/sutori.webp"
         ]
     },
     {
         "id": 4,
-        "name": "天童 爱丽丝",
-        "school": "千年科学学园",
-        "club": "游戏开发部",
+        "name": "栗村 爱莉",
+        "name-en": "airi",
+        "name-jp": "",
+        "school": "",
+        "club": "",
         "avatar": [
-            "/HeadIcon/student/aris.webp",
-            "/HeadIcon/student/aris_(maid).webp"
+            "/HeadIcon/student/airi.webp"
         ]
     },
     {
         "id": 5,
-        "name": "陆八魔 阿露",
-        "school": "格赫娜学园",
-        "club": "便利屋68",
+        "name": "室笠 朱音",
+        "name-en": "akane",
+        "name-jp": "",
+        "school": "",
+        "club": "",
         "avatar": [
-            "/HeadIcon/student/aru.webp",
-            "/HeadIcon/student/aru_(dress).webp"
+            "/HeadIcon/student/akane.webp",
+            "/HeadIcon/student/akane_(bunny).webp"
         ]
     },
     {
         "id": 6,
+        "name": "鳄渊 亚伽里",
+        "name-en": "akari",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/akari.webp",
+            "/HeadIcon/student/akari_(new_year).webp"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "清澄 晶",
+        "name-en": "akira",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/akira.webp"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "天雨 亚子",
+        "name-en": "ako",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/ako.webp",
+            "/HeadIcon/student/ako_(dress).webp"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "扇喜 葵",
+        "name-en": "aoi",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/aoi.webp"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "天童 爱丽丝",
+        "name-en": "aris",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/aris.webp",
+            "/HeadIcon/student/aris_(idol).webp",
+            "/HeadIcon/student/aris_(maid).webp"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "阿洛娜",
+        "name-en": "arona",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/arona.webp"
+        ]
+    },
+    {
+        "id": 12,
+        "name": "陆八魔 阿露",
+        "name-en": "aru",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/aru.webp",
+            "/HeadIcon/student/aru_(dress).webp",
+            "/HeadIcon/student/aru_(idol).webp",
+            "/HeadIcon/student/aru_(new_year).webp"
+        ]
+    },
+    {
+        "id": 13,
+        "name": "一之濑 明日奈",
+        "name-en": "asuna",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/asuna.webp",
+            "/HeadIcon/student/asuna_(bunny).webp"
+        ]
+    },
+    {
+        "id": 14,
+        "name": "秤 亚津子",
+        "name-en": "atsuko",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/atsuko.webp"
+        ]
+    },
+    {
+        "id": 15,
+        "name": "奥空 绫音",
+        "name-en": "ayane",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/ayane.webp",
+            "/HeadIcon/student/ayane_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 16,
+        "name": "岩柜 步梦",
+        "name-en": "ayumu",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/ayumu.webp"
+        ]
+    },
+    {
+        "id": 17,
         "name": "白洲 梓",
-        "school": "三一综合学园",
-        "club": "补习部",
+        "name-en": "azusa",
+        "name-jp": "",
+        "school": "",
+        "club": "",
         "avatar": [
             "/HeadIcon/student/azusa.webp",
             "/HeadIcon/student/azusa_(swimsuit).webp"
         ]
     },
     {
-        "id": 7,
+        "id": 18,
+        "name": "连河 切里诺",
+        "name-en": "cherino",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/cherino.webp",
+            "/HeadIcon/student/cherino_(hot_spring).webp"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "",
+        "name-en": "chiaki",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/chiaki.webp"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "各务 千寻",
+        "name-en": "chihiro",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/chihiro.webp",
+            "/HeadIcon/student/chihiro_(camping).webp"
+        ]
+    },
+    {
+        "id": 21,
+        "name": "火宫 千夏",
+        "name-en": "chinatsu",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/chinatsu.webp",
+            "/HeadIcon/student/chinatsu_(hot_spring).webp"
+        ]
+    },
+    {
+        "id": 22,
+        "name": "和乐 千世",
+        "name-en": "chise",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/chise.webp",
+            "/HeadIcon/student/chise_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 23,
+        "name": "和泉元 艾米",
+        "name-en": "eimi",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/eimi.webp",
+            "/HeadIcon/student/eimi_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 24,
+        "name": "",
+        "name-en": "erika",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/erika.webp"
+        ]
+    },
+    {
+        "id": 25,
+        "name": "合欢垣 吹雪",
+        "name-en": "fubuki",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/fubuki.webp"
+        ]
+    },
+    {
+        "id": 26,
+        "name": "爱清 枫香",
+        "name-en": "fuuka",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/fuuka.webp",
+            "/HeadIcon/student/fuuka_(new_year).webp"
+        ]
+    },
+    {
+        "id": 27,
+        "name": "",
+        "name-en": "haine",
+        "name-jp": "ハイネ",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/haine.webp"
+        ]
+    },
+    {
+        "id": 28,
+        "name": "朝颜 花江",
+        "name-en": "hanae",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/hanae.webp",
+            "/HeadIcon/student/hanae_(christmas).webp"
+        ]
+    },
+    {
+        "id": 29,
+        "name": "浦和 花子",
+        "name-en": "hanako",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/hanako.webp",
+            "/HeadIcon/student/hanako_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 30,
+        "name": "小钩 晴",
+        "name-en": "hare",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/hare.webp",
+            "/HeadIcon/student/hare_(camping).webp"
+        ]
+    },
+    {
+        "id": 31,
+        "name": "伊草 春香",
+        "name-en": "haruka",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/haruka.webp",
+            "/HeadIcon/student/haruka_(dress).webp",
+            "/HeadIcon/student/haruka_(jacket).webp",
+            "/HeadIcon/student/haruka_(new_year).webp"
+        ]
+    },
+    {
+        "id": 32,
+        "name": "黑馆 晴奈",
+        "name-en": "haruna",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/haruna.webp",
+            "/HeadIcon/student/haruna_(new_year).webp",
+            "/HeadIcon/student/haruna_(track).webp"
+        ]
+    },
+    {
+        "id": 33,
+        "name": "羽川 莲见",
+        "name-en": "hasumi",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/hasumi.webp",
+            "/HeadIcon/student/hasumi_(track).webp"
+        ]
+    },
+    {
+        "id": 34,
+        "name": "初音未来",
+        "name-en": "hatsune",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/hatsune_miku.webp"
+        ]
+    },
+    {
+        "id": 35,
+        "name": "猫冢 响",
+        "name-en": "hibiki",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/hibiki.webp",
+            "/HeadIcon/student/hibiki_(cheer_squad).webp"
+        ]
+    },
+    {
+        "id": 36,
+        "name": "阿慈谷 日富美",
+        "name-en": "hifumi",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/hifumi.webp",
+            "/HeadIcon/student/hifumi_(idol).webp",
+            "/HeadIcon/student/hifumi_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 37,
+        "name": "明星 日鞠",
+        "name-en": "himari",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/himari.webp"
+        ]
+    },
+    {
+        "id": 38,
+        "name": "空崎 日奈",
+        "name-en": "hina",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/hina.webp",
+            "/HeadIcon/student/hina_(dress).webp",
+            "/HeadIcon/student/hina_(sleep).webp",
+            "/HeadIcon/student/hina_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 39,
+        "name": "若叶 日向",
+        "name-en": "hinata",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/hinata.webp",
+            "/HeadIcon/student/hinata_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 40,
+        "name": "槌永 日和",
+        "name-en": "hiyori",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/hiyori.webp"
+        ]
+    },
+    {
+        "id": 41,
+        "name": "小鸟游 星野",
+        "name-en": "hoshino",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/hoshino.webp",
+            "/HeadIcon/student/hoshino_(last).webp",
+            "/HeadIcon/student/hoshino_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 42,
+        "name": "伊吹",
+        "name-en": "ibuki",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/ibuki.webp",
+            "/HeadIcon/student/ibuki_(dress).webp"
+        ]
+    },
+    {
+        "id": 43,
+        "name": "仲正 一花",
+        "name-en": "ichika",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/ichika.webp"
+        ]
+    },
+    {
+        "id": 44,
+        "name": "银镜 伊织",
+        "name-en": "iori",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/iori.webp",
+            "/HeadIcon/student/iori_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 45,
+        "name": "枣 伊吕波",
+        "name-en": "iroha",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/iroha.webp"
+        ]
+    },
+    {
+        "id": 46,
+        "name": "狮子堂 泉",
+        "name-en": "izumi",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/izumi.webp",
+            "/HeadIcon/student/izumi_(new_year).webp",
+            "/HeadIcon/student/izumi_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 47,
         "name": "久田 泉奈",
-        "school": "百鬼夜行联合学园",
-        "club": "忍法研究部",
+        "name-en": "izuna",
+        "name-jp": "",
+        "school": "",
+        "club": "",
         "avatar": [
             "/HeadIcon/student/izuna.webp",
             "/HeadIcon/student/izuna_(swimsuit).webp"
         ]
     },
     {
-        "id": 8,
+        "id": 48,
+        "name": "赤司 纯子",
+        "name-en": "junko",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/junko.webp",
+            "/HeadIcon/student/junko_(new_year).webp"
+        ]
+    },
+    {
+        "id": 49,
+        "name": "牛牧 朱莉",
+        "name-en": "juri",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/juri.webp"
+        ]
+    },
+    {
+        "id": 50,
+        "name": "勇美 枫",
+        "name-en": "kaede",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kaede.webp"
+        ]
+    },
+    {
+        "id": 51,
+        "name": "桑上 嘉穗",
+        "name-en": "kaho",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kaho.webp"
+        ]
+    },
+    {
+        "id": 52,
+        "name": "申谷 海",
+        "name-en": "kai",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kai.webp"
+        ]
+    },
+    {
+        "id": 53,
+        "name": "会长",
+        "name-en": "kaichou",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kaichou.webp"
+        ]
+    },
+    {
+        "id": 54,
+        "name": "尾刃 叶渚",
+        "name-en": "kanna",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kanna.webp"
+        ]
+    },
+    {
+        "id": 55,
+        "name": "角楯 花凛",
+        "name-en": "karin",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/karin.webp",
+            "/HeadIcon/student/karin_(bunny).webp"
+        ]
+    },
+    {
+        "id": 56,
+        "name": "鬼怒川 霞",
+        "name-en": "kasumi",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kasumi.webp"
+        ]
+    },
+    {
+        "id": 57,
+        "name": "不知火 花耶",
+        "name-en": "kaya",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kaya.webp"
+        ]
+    },
+    {
+        "id": 58,
+        "name": "鬼方 佳代子",
+        "name-en": "kayoko",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kayoko.webp",
+            "/HeadIcon/student/kayoko_(dress).webp",
+            "/HeadIcon/student/kayoko_(new_year).webp"
+        ]
+    },
+    {
+        "id": 59,
+        "name": "杏山 和纱",
+        "name-en": "kazusa",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kazusa.webp"
+        ]
+    },
+    {
+        "id": 60,
+        "name": "kei",
+        "name-en": "kei",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kei.webp"
+        ]
+    },
+    {
+        "id": 61,
+        "name": "桐生 桔梗",
+        "name-en": "kikyou",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kikyou.webp"
+        ]
+    },
+    {
+        "id": 62,
+        "name": "",
+        "name-en": "kirara",
+        "name-jp": "キララ",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kirara.webp"
+        ]
+    },
+    {
+        "id": 63,
+        "name": "中务 桐乃",
+        "name-en": "kirino",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kirino.webp"
+        ]
+    },
+    {
+        "id": 64,
+        "name": "龙华 妃咲",
+        "name-en": "kisaki",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kisaki.webp"
+        ]
+    },
+    {
+        "id": 65,
+        "name": "下江 小春",
+        "name-en": "koharu",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/koharu.webp",
+            "/HeadIcon/student/koharu_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 66,
+        "name": "春原 心奈",
+        "name-en": "kokona",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kokona.webp"
+        ]
+    },
+    {
+        "id": 67,
+        "name": "音濑 小玉",
+        "name-en": "kotama",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kotama.webp",
+            "/HeadIcon/student/kotama_(camping).webp"
+        ]
+    },
+    {
+        "id": 68,
+        "name": "豊见 琴里",
+        "name-en": "kotori",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kotori.webp",
+            "/HeadIcon/student/kotori_(cheer_squad).webp"
+        ]
+    },
+    {
+        "id": 69,
+        "name": "黑崎 小雪",
+        "name-en": "koyuki",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/koyuki.webp",
+            "/HeadIcon/student/koyuki_(bunny).webp"
+        ]
+    },
+    {
+        "id": 70,
+        "name": "胡桃",
+        "name-en": "kurumi",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kurumi.webp"
+        ]
+    },
+    {
+        "id": 71,
+        "name": "葛叶",
+        "name-en": "kuzuha",
+        "name-jp": "クズノハ",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/kuzuha.webp"
+        ]
+    },
+    {
+        "id": 72,
+        "name": "",
+        "name-en": "mai",
+        "name-jp": "風巻 マイ",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/mai.webp"
+        ]
+    },
+    {
+        "id": 73,
+        "name": "小涂 真纪",
+        "name-en": "maki",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/maki.webp",
+            "/HeadIcon/student/maki_(camping).webp"
+        ]
+    },
+    {
+        "id": 74,
+        "name": "羽沼 真琴",
+        "name-en": "makoto",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/makoto.webp",
+            "/HeadIcon/student/makoto_(dress).webp"
+        ]
+    },
+    {
+        "id": 75,
+        "name": "伊落 玛丽",
+        "name-en": "mari",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/mari.webp",
+            "/HeadIcon/student/mari_(track).webp"
+        ]
+    },
+    {
+        "id": 76,
+        "name": "池仓 玛丽娜",
+        "name-en": "marina",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/marina.webp"
+        ]
+    },
+    {
+        "id": 77,
+        "name": "静山 真白",
+        "name-en": "mashiro",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/mashiro.webp",
+            "/HeadIcon/student/mashiro_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 78,
+        "name": "下仓 惠",
+        "name-en": "megu",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/megu.webp"
+        ]
+    },
+    {
+        "id": 79,
+        "name": "姬木 爱瑠",
+        "name-en": "meru",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/meru.webp",
+            "/HeadIcon/student/meru_(hot_spring).webp"
+        ]
+    },
+    {
+        "id": 80,
+        "name": "千鸟 满",
+        "name-en": "michiru",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/michiru.webp"
+        ]
+    },
+    {
+        "id": 81,
+        "name": "才羽 绿",
+        "name-en": "midori",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/midori.webp",
+            "/HeadIcon/student/midori_(maid).webp"
+        ]
+    },
+    {
+        "id": 82,
+        "name": "圣园 未花",
+        "name-en": "mika",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/mika.webp"
+        ]
+    },
+    {
+        "id": 83,
+        "name": "水羽 三森",
+        "name-en": "mimori",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/mimori.webp",
+            "/HeadIcon/student/mimori_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 84,
+        "name": "近卫 弥奈",
+        "name-en": "mina",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/mina.webp"
+        ]
+    },
+    {
+        "id": 85,
+        "name": "苍森 美弥",
+        "name-en": "mine",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/mine.webp"
+        ]
+    },
+    {
+        "id": 86,
+        "name": "安守 实梨",
+        "name-en": "minori",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/minori.webp"
+        ]
+    },
+    {
+        "id": 87,
+        "name": "御坂 美琴",
+        "name-en": "misaka",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/misaka_mikoto.webp"
+        ]
+    },
+    {
+        "id": 88,
+        "name": "戒野 美咲",
+        "name-en": "misaki",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/misaki.webp"
+        ]
+    },
+    {
+        "id": 89,
+        "name": "月雪 宫子",
+        "name-en": "miyako",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/miyako.webp",
+            "/HeadIcon/student/miyako_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 90,
+        "name": "霞沢 美游",
+        "name-en": "miyu",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/miyu.webp",
+            "/HeadIcon/student/miyu_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 91,
+        "name": "风仓 萌绘",
+        "name-en": "moe",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/moe.webp",
+            "/HeadIcon/student/moe_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 92,
+        "name": "秋泉 红叶",
+        "name-en": "momiji",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/momiji.webp"
+        ]
+    },
+    {
+        "id": 93,
+        "name": "才羽 桃井",
+        "name-en": "momoi",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/momoi.webp",
+            "/HeadIcon/student/momoi_(maid).webp"
+        ]
+    },
+    {
+        "id": 94,
+        "name": "由良木 桃香",
+        "name-en": "momoka",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/momoka.webp"
+        ]
+    },
+    {
+        "id": 95,
+        "name": "浅黄 睦月",
+        "name-en": "mutsuki",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/mutsuki.webp",
+            "/HeadIcon/student/mutsuki_(dress).webp",
+            "/HeadIcon/student/mutsuki_(jacket).webp",
+            "/HeadIcon/student/mutsuki_(new_year).webp"
+        ]
+    },
+    {
+        "id": 96,
+        "name": "桐藤 渚",
+        "name-en": "nagisa",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/nagisa.webp"
+        ]
+    },
+    {
+        "id": 97,
+        "name": "",
+        "name-en": "nagusa",
+        "name-jp": "御稜 ナグサ",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/nagusa.webp"
+        ]
+    },
+    {
+        "id": 98,
+        "name": "柚鸟 夏",
+        "name-en": "natsu",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/natsu.webp"
+        ]
+    },
+    {
+        "id": 99,
+        "name": "美甘 尼禄",
+        "name-en": "neru",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/neru.webp",
+            "/HeadIcon/student/neru_(bunny).webp"
+        ]
+    },
+    {
+        "id": 100,
+        "name": "妮可",
+        "name-en": "niko",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/niko.webp"
+        ]
+    },
+    {
+        "id": 101,
+        "name": "天地 妮娅",
+        "name-en": "niya",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/niya.webp"
+        ]
+    },
+    {
+        "id": 102,
+        "name": "生盐 诺亚",
+        "name-en": "noa",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/noa.webp"
+        ]
+    },
+    {
+        "id": 103,
+        "name": "天见 和香",
+        "name-en": "nodoka",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/nodoka.webp",
+            "/HeadIcon/student/nodoka_(hot_spring).webp"
+        ]
+    },
+    {
+        "id": 104,
+        "name": "十六夜 野宫",
+        "name-en": "nonomi",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/nonomi.webp",
+            "/HeadIcon/student/nonomi_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 105,
+        "name": "音葵",
+        "name-en": "otogi",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/otogi.webp"
+        ]
+    },
+    {
+        "id": 106,
+        "name": "朝比奈 菲娜",
+        "name-en": "pina",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/pina.webp"
+        ]
+    },
+    {
+        "id": 107,
+        "name": "虞美人",
+        "name-en": "poppy",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/poppy.webp"
+        ]
+    },
+    {
+        "id": 108,
+        "name": "普拉娜",
+        "name-en": "purana",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/purana.webp"
+        ]
+    },
+    {
+        "id": 109,
+        "name": "兰舞",
+        "name-en": "rabu",
+        "name-jp": "河駒風 ラブ",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/rabu.webp"
+        ]
+    },
+    {
+        "id": 110,
+        "name": "",
+        "name-en": "rei",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/rei.webp"
+        ]
+    },
+    {
+        "id": 111,
+        "name": "鹿山 丽情",
+        "name-en": "reijo",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/reijo.webp"
+        ]
+    },
+    {
+        "id": 112,
+        "name": "宇泽 玲纱",
+        "name-en": "reisa",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/reisa.webp"
+        ]
+    },
+    {
+        "id": 113,
+        "name": "不破 莲华",
+        "name-en": "renge",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/renge.webp"
+        ]
+    },
+    {
+        "id": 114,
+        "name": "七神 凛",
+        "name-en": "rin",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/rin.webp"
+        ]
+    },
+    {
+        "id": 115,
+        "name": "调月 莉音",
+        "name-en": "rio",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/rio.webp"
+        ]
+    },
+    {
+        "id": 116,
+        "name": "朱城 瑠美",
+        "name-en": "rumi",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/rumi.webp"
+        ]
+    },
+    {
+        "id": 117,
+        "name": "空井 咲",
+        "name-en": "saki",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/saki.webp",
+            "/HeadIcon/student/saki_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 118,
+        "name": "歌住 樱子",
+        "name-en": "sakurako",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/sakurako.webp"
+        ]
+    },
+    {
+        "id": 119,
+        "name": "锭前 沙织",
+        "name-en": "saori",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/saori.webp",
+            "/HeadIcon/student/saori_(dress).webp"
+        ]
+    },
+    {
+        "id": 120,
+        "name": "佐天 泪子",
+        "name-en": "saten",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/saten_ruiko.webp"
+        ]
+    },
+    {
+        "id": 121,
+        "name": "",
+        "name-en": "satsuki",
+        "name-jp": "サツキ",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/satsuki.webp"
+        ]
+    },
+    {
+        "id": 122,
+        "name": "药子 沙绫",
+        "name-en": "saya",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/saya.webp",
+            "/HeadIcon/student/saya_(casual).webp"
+        ]
+    },
+    {
+        "id": 123,
+        "name": "百合园 圣亚",
+        "name-en": "seia",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/seia.webp"
+        ]
+    },
+    {
+        "id": 124,
+        "name": "氷室 濑名",
+        "name-en": "sena",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/sena.webp"
+        ]
+    },
+    {
+        "id": 125,
+        "name": "黑见 芹香",
+        "name-en": "serika",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/serika.webp",
+            "/HeadIcon/student/serika_(new_year).webp",
+            "/HeadIcon/student/serika_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 126,
+        "name": "鹫见 芹娜",
+        "name-en": "serina",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/serina.webp",
+            "/HeadIcon/student/serina_(christmas).webp"
+        ]
+    },
+    {
+        "id": 127,
+        "name": "间宵 时雨",
+        "name-en": "shigure",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/shigure.webp",
+            "/HeadIcon/student/shigure_(hot_spring).webp"
+        ]
+    },
+    {
+        "id": 128,
+        "name": "圆堂 志美子",
+        "name-en": "shimiko",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/shimiko.webp"
+        ]
+    },
+    {
+        "id": 129,
+        "name": "",
+        "name-en": "shinon",
+        "name-jp": "川流 シノン",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/shinon.webp"
+        ]
+    },
+    {
+        "id": 130,
+        "name": "砂狼 白子",
+        "name-en": "shiroko",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/shiroko.webp",
+            "/HeadIcon/student/shiroko_(cycling).webp",
+            "/HeadIcon/student/shiroko_(swimsuit).webp",
+            "/HeadIcon/student/shiroko_kowai.webp"
+        ]
+    },
+    {
+        "id": 131,
+        "name": "河和 静子",
+        "name-en": "shizuko",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/shizuko.webp",
+            "/HeadIcon/student/shizuko_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 132,
+        "name": "食蜂 操祈",
+        "name-en": "shokuhou",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/shokuhou_misaki.webp"
+        ]
+    },
+    {
+        "id": 133,
+        "name": "",
+        "name-en": "shuko",
+        "name-jp": "シュロ",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/shuko.webp"
+        ]
+    },
+    {
+        "id": 134,
+        "name": "春原 瞬",
+        "name-en": "shun",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/shun.webp",
+            "/HeadIcon/student/shun_(small).webp"
+        ]
+    },
+    {
+        "id": 135,
+        "name": "小空",
+        "name-en": "sora",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/sora.webp"
+        ]
+    },
+    {
+        "id": 136,
+        "name": "乙花 菫",
+        "name-en": "sumire",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/sumire.webp"
+        ]
+    },
+    {
+        "id": 137,
+        "name": "",
+        "name-en": "sumomo",
+        "name-jp": "スモモ",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/sumomo.webp"
+        ]
+    },
+    {
+        "id": 138,
+        "name": "守月 铃美",
+        "name-en": "suzumi",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/suzumi.webp"
+        ]
+    },
+    {
+        "id": 139,
+        "name": "三善 贵音",
+        "name-en": "takane",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/takane.webp"
+        ]
+    },
+    {
+        "id": 140,
+        "name": "飞鸟马 时",
+        "name-en": "toki",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/toki.webp",
+            "/HeadIcon/student/toki_(bunny).webp"
+        ]
+    },
+    {
+        "id": 141,
+        "name": "佐城 巴",
+        "name-en": "tomoe",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/tomoe.webp"
+        ]
+    },
+    {
+        "id": 142,
+        "name": "春日 椿",
+        "name-en": "tsubaki",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/tsubaki.webp"
+        ]
+    },
+    {
+        "id": 143,
         "name": "大野 月咏",
-        "school": "百鬼夜行联合学园",
-        "club": "忍法研究部",
+        "name-en": "tsukuyo",
+        "name-jp": "",
+        "school": "",
+        "club": "",
         "avatar": [
             "/HeadIcon/student/tsukuyo.webp"
+        ]
+    },
+    {
+        "id": 144,
+        "name": "剑先 鹤城",
+        "name-en": "tsurugi",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/tsurugi.webp",
+            "/HeadIcon/student/tsurugi_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 145,
+        "name": "古关 忧",
+        "name-en": "ui",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/ui.webp",
+            "/HeadIcon/student/ui_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 146,
+        "name": "梦",
+        "name-en": "ume",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/ume.webp"
+        ]
+    },
+    {
+        "id": 147,
+        "name": "",
+        "name-en": "umika",
+        "name-jp": "ウミカ",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/umika.webp"
+        ]
+    },
+    {
+        "id": 148,
+        "name": "白石 歌原",
+        "name-en": "utaha",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/utaha.webp",
+            "/HeadIcon/student/utaha_(cheer_squad).webp"
+        ]
+    },
+    {
+        "id": 149,
+        "name": "狐坂 若藻",
+        "name-en": "wakamo",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/wakamo.webp",
+            "/HeadIcon/student/wakamo_(dress).webp",
+            "/HeadIcon/student/wakamo_(swimsuit).webp"
+        ]
+    },
+    {
+        "id": 150,
+        "name": "荒槙 八云",
+        "name-en": "yakumo",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/yakumo.webp"
+        ]
+    },
+    {
+        "id": 151,
+        "name": "伊原木 好美",
+        "name-en": "yoshimi",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/yoshimi.webp"
+        ]
+    },
+    {
+        "id": 152,
+        "name": "勘解由小路 紫",
+        "name-en": "yukari",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/yukari.webp",
+            "/HeadIcon/student/yukari_(small).webp"
+        ]
+    },
+    {
+        "id": 153,
+        "name": "七度 雪乃",
+        "name-en": "yukino",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/yukino.webp"
+        ]
+    },
+    {
+        "id": 154,
+        "name": "早濑 优香",
+        "name-en": "yuuka",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/yuuka.webp",
+            "/HeadIcon/student/yuuka_(idol).webp",
+            "/HeadIcon/student/yuuka_(track).webp"
+        ]
+    },
+    {
+        "id": 155,
+        "name": "花冈 柚子",
+        "name-en": "yuzu",
+        "name-jp": "",
+        "school": "",
+        "club": "",
+        "avatar": [
+            "/HeadIcon/student/yuzu.webp",
+            "/HeadIcon/student/yuzu_(maid).webp"
         ]
     }
 ]
