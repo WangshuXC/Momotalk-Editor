@@ -29,9 +29,10 @@
     </div>
 
     <div class="Main-container">
+
       <div class="Data-Container">
-        <div class="Student-List">
-          <div class="Student-Item" v-for="student in studentList.slice(4)" :key="student.id">
+        <div class="Student-List" ref="studentList">
+          <div class="Student-Item" v-for="student in displayedStudents" :key="student.id">
             <div class="Avatar-Box">
               <template v-for="(avatar, avatarIndex) in student.avatar">
                 <div class="Avatar" :id="avatarIndex" @click="changeStudent(student.id, avatarIndex)">
@@ -41,14 +42,14 @@
             </div>
             <div class="Name">{{ student.name }}</div>
           </div>
-
         </div>
       </div>
+
 
       <div class="Talk-Container">
         <div class="Talk" ref="talk">
 
-          <template v-for="(data, index) in dataList" :key="index">
+          <template v-for="( data, index ) in  dataList " :key="index">
             <div class="Talk-Student" v-if="data.studentId >= 4">
               <div class="Talk-Left">
                 <div class="Avatar" v-if="data.avatarState !== 'Hide'">
@@ -56,8 +57,9 @@
                 </div>
               </div>
               <div class="Talk-Right">
-                <div class="Talk-Name" v-show="data.avatarState !== 'Hide'"><strong>{{ studentList[data.studentId].name
-                    }}</strong></div>
+                <div class="Talk-Name" v-show="data.avatarState !== 'Hide'"><strong>{{
+        studentList[data.studentId].name
+      }}</strong></div>
                 <div class="Talk-Message" :class="{ 'no-before': data.avatarState === 'Hide' }">
                   <span contenteditable @input="updateContent(data, $event)">{{ data.content }}</span>
                 </div>
@@ -82,17 +84,13 @@
                   <span class="text">回复</span>
                 </div>
 
-                <!-- <div class="Reply-Choices">
-                  <div class="Reply-Choice">
-                    <span class="text">{{ data.content }}</span>
-                  </div>
-                </div> -->
                 <div class="Reply-Choices">
-                  <template v-for="(item, index) in data.content.split('\n')" :key="index">
-                    <div class="Reply-Choice" contenteditable @input="updateContent(item, $event)">
+                  <div class="Reply-Choice" v-for="( item, Reply_index ) in  data.content.split('\n') "
+                    :key="Reply_index">
+                    <span class="text">
                       {{ item }}
-                    </div>
-                  </template>
+                    </span>
+                  </div>
                 </div>
 
               </div>
@@ -135,7 +133,7 @@
           </div>
 
           <div ref="editItemBox" class="Edit-Item-Box" @wheel="handleHorizontalScroll">
-            <div class="Edit-Item-a" v-for="(item, index) in studentList.slice(0, 4)" :key="index"
+            <div class="Edit-Item-a" v-for="( item, index ) in  studentList.slice(0, 4) " :key="index"
               @click="change(item.id)">
               <v-tooltip activator="parent" location="top">{{ item.name }}</v-tooltip>
               <div class="Avatar">
@@ -143,7 +141,7 @@
               </div>
             </div>
 
-            <div class="Edit-Item" :id="index" v-for="( student, index ) in  talkedStudentList" :key="index"
+            <div class="Edit-Item" :id="index" v-for="(  student, index  ) in   talkedStudentList " :key="index"
               :style="{ 'justify-content': 'space-around' }" @click="changeStudent(student.id, student.avatar)">
               <v-tooltip activator="parent" location="top">{{ studentList[student.id].name }}</v-tooltip>
               <div class="Avatar">
@@ -185,6 +183,8 @@ export default {
         avatar: 0
       },
       studentList: [],
+      displayedStudents: [], // 当前展示的学生数据
+      distanceToBottom: 50, // 距离底部的距离
       talkedStudentList: [
       ],
       dataItem: {
@@ -292,10 +292,38 @@ export default {
             console.error('oops, screenshot went wrong!', error)
           })
       }
-    }
+    },
+    fetchInitialData() {
+      // 获取初始数据并更新 studentList 和 displayedStudents
+      this.displayedStudents = this.displayedStudents.concat(
+        this.studentList.slice(4, 20)
+      );
+    },
+    fetchMoreData() {
+      console.log('fetch more data');
+      this.displayedStudents = this.displayedStudents.concat(
+        this.studentList.slice(this.displayedStudents.length + 4, this.displayedStudents.length + 20)
+      );
+    },
+    setupScrollListener() {
+      const studentList = this.$refs.studentList;
+      studentList.addEventListener('scroll', () => {
+        if (this.isNearBottom(studentList)) {
+          this.fetchMoreData();
+        }
+      });
+    },
+    isNearBottom(container) {
+      const scrollHeight = container.scrollHeight;
+      const offsetHeight = container.offsetHeight;
+      const scrollTop = container.scrollTop;
+      return scrollHeight - (scrollTop + offsetHeight) < this.distanceToBottom;
+    },
   },
   mounted() {
     this.loadFromLocalStorage();
+    this.fetchInitialData();
+    this.setupScrollListener();
   },
   beforeMount() {
     this.studentList = studentData;
@@ -405,6 +433,8 @@ export default {
     width: 100%;
     height: 100%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
     overflow-y: auto;
 
     .Student-Item {
@@ -424,6 +454,7 @@ export default {
       }
 
       .Name {
+        color: #4c5b70;
         font-size: 20px;
         font-weight: 550;
       }
@@ -597,11 +628,7 @@ export default {
             background-color: #fff;
             border: 1px solid #e7ebec;
             border-radius: 5px;
-            color: #4c5b70;
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 24px;
-            min-height: 24px;
+            min-height: 42px;
             overflow-wrap: break-word;
             margin-bottom: 10px;
             padding: 8px;
@@ -609,6 +636,13 @@ export default {
             text-align: center;
             white-space: pre-wrap;
             box-shadow: 0 2px 5px #0000003d;
+
+            span {
+              color: #4c5b70;
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 24px;
+            }
           }
         }
       }
